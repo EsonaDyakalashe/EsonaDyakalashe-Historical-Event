@@ -1,0 +1,389 @@
+@import url('https://fonts.googlesapis.com/css?family=Montserrat:300,400,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family:'Montserrat',sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    min-height: 100vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: center;
+}
+/****NAV BAR****/
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 2px;
+    color:white;
+    background-color:gray; 
+    box-shadow: white;
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    padding: 0px;
+    height: 100px;
+}
+nav ul{
+    float:right;
+    margin-right: 40px;
+}
+nav li{
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 80px;
+}
+nav a{
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding:7px 10px;
+    border-radius: 3px;
+}
+a.active, a:hover{
+    border: 1px solid white;
+    transition: .5s;
+}
+
+ @media(max-width:1048px){
+    .section-tittle{
+        font-size: 12px;
+        position: center;
+    }
+    .section{
+        flex-direction: column;
+    }
+   nav{
+       width: 100%;
+       height: 88px;
+       padding: 0px 0px;
+   }
+    
+    .image{
+        height: 100vh;
+    }
+    nav ul li a{
+        font-size: 12px;
+       position: relative;
+    }
+    .nav_toogle{
+        color:white;
+        font-size: 1.2rem;
+    }
+    
+    
+}
+
+.toogle{
+    width: 100%;
+    padding: 10px 20px;
+    background:white;
+}
+
+label.logo{
+    color:white;
+    text-transform: uppercase;
+   font-size: 35px;
+   font-weight: bold;
+   padding: 0 100px;
+   line-height: 80px;
+}
+label.logo span{
+    color:black;
+}
+p{
+   color: black;
+   font-size: 3.4rem;
+    margin-top:5px;
+    line-height: 2,5rem;
+    font-weight: 200px;
+    letter-spacing: .05rem;
+}
+.section-tittle{
+    font-size: 4rem;
+    font-weight: 300;
+    color:rgb(15, 14, 14);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+    margin-bottom: 1%;
+}
+.section-tittle span{
+    color:gray;
+}
+.cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color:white;
+    background-color: transparent;
+    border: 2px solid black;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease ;
+    transition-property: background-color, color;
+}
+.cta:hover{
+    color: white;
+    background-color:rgb(102, 97, 102); 
+    transform: scale(1.1);
+}
+
+/*Hero Section*/
+#hero{
+    background-image: url(./unnamed.jpg) ;
+    background-size: cover;
+    background-position:top center;
+    position: relative;
+    z-index: -1;
+}
+#hero::after{
+
+position: absolute;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+z-index: -1;
+}
+#hero .hero{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:0 50px;
+    justify-content: flex-start;
+
+}
+#hero h1{
+    display: block;
+    width:fit-content;
+    font-size: 4rem;
+    position: relative;
+    text-transform: uppercase; 
+    color: transparent;
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 1ss;
+}
+#hero h1:nth-child(1){
+    animation-delay: 1s;
+}
+#hero h1:nth-child(2){
+    animation-delay: 2s;
+}
+#hero h1:nth-child(3){
+  /*  animation:text_reveal_name .5s ease forwards;*/
+    animation-delay: 3s;
+}
+#hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width:0;
+    background-color: rgb(100, 95, 100);
+    animation: text_reveal_box 1s ease;
+    animation-delay: .3s;
+}
+#hero h1:nth-child(1)span{
+    animation-delay: .5s;
+}
+#hero h1:nth-child(2)span{
+    animation-delay: 1.5s;
+}
+#hero h1:nth-child(3)span{
+    animation-delay: 2.5s;
+}
+/*End Hero Section*/
+/*Bioraphy section*/
+.biography-container{
+    width: 97%;
+    height: 750px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(0,0,0.2);
+    display: flex;
+    margin: 2% auto 20px auto;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.biography-container img{
+    height: 750px;
+    width: 45%;
+    margin-left: auto;
+}
+.biography-container p{
+    margin-right: 30%;
+    font-size: 18px;
+}
+#biography .section-tittle{
+margin-top:-40%;
+position: center;
+}
+.biography-top{
+    margin-bottom: -60;
+    margin-right: -0.0005%;
+}
+/*End Biography Section*/
+/*Projects Section*/
+.history-container{
+    width: 97%;
+    height: 750px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(0,0,0.2);
+    display: flex;
+    margin: 2% auto 20px auto;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.history-container img{
+    height: 750px;
+    width: 45%;
+    margin-left: auto;
+}
+ .history-top h2{
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30%;
+}
+.history-container p{
+    margin-right: 16%;
+    font-size: 16px;
+    margin-top: -30%;
+}
+#history .section-tittle{
+margin-top:-40%;
+position: center;
+  
+}
+
+/*End History Section*/
+/*Achivements Section*/
+.achive-container img{
+    height: 750px;
+    width: 45%;
+    margin-left: 1%;   
+}
+.achive-container p{
+    margin-left: 50%;
+    font-size: bold;
+    margin-top: -30%;
+}
+#Achievements ul li{
+    margin-left: 50%;
+    font-size: 18px;
+   position: inherit;
+    
+}
+.subscribe{
+    padding: 60px;
+    background-color: grey;
+    flex-direction: column;
+}
+.subscribe .input-group{
+    max-width: 650px;
+    margin: 0 auto;
+    text-align:end;
+}
+.subscribe .input-group .form-control{
+    height: 50px;
+    border-color: white;
+    border-radius: 0;
+    align-items: center;
+    margin-left: 80%;
+    display: flex;
+}
+.subscribe .input-group .form-control:focus{
+    box-shadow: none;
+    border:2px solid black;
+}
+.subscribe .input-group .btnn{
+    min-height: 50px;
+    border-radius: 0;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+}
+.subscribe .input-group h3{
+    margin-bottom: 5%;
+    font-weight: bold;
+    margin-left: -50%;
+    font-size: 20px;
+    color: white;
+}
+#status{
+    flex-direction: column;
+    width: 50%;
+    max-width: 100px;
+    position: relative;
+    text-align: end;
+    padding: 10px;
+    margin-right:-70%;
+    margin: 0 auto;
+    margin-top: 2%;
+    left: 60%;
+    border-radius: 8px;
+}
+#status.success{
+ background-color: rgb(91, 91, 117);
+ animation: status 8s ease forwards;
+}
+#status.error{
+    background-color: rgb(91, 91, 117);
+    color: white;
+    animation: status 8s ease forwards;
+   }
+   .form-group label{
+       font-weight: bold;
+       font-size: 15px;
+       color: white;
+   }
+   .reset{
+       width: 10%;
+       min-height: 50px;
+       background-color: black;
+       color: white;
+       font-weight: bold; 
+       font-size: 10px;
+       font-weight: 300;
+   }
+/*End Achievements Section*/
+/*keyframe*/
+
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal_name{
+100%{
+    color:white;
+    font-weight: 500;
+}
+
+}
+/*End keyframes*/
